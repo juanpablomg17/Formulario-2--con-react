@@ -1,26 +1,61 @@
-import React from 'react';
+
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+// components
+import Navigation from './Components/Navigation';
+import Tareas from './Components/Task';
+import Formulario from './Components/TaskForm';
+import todos from './smple/task.json';
+
+
+
+
+export default class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      todos
+    };
+
+    this.AddTask = this.AddTask.bind(this);
+  }
+
+  AddTask(todo){
+    this.setState({
+      todos:  [...this.state.todos, todo]
+    })
+
+    
+  }
+
+  
+
+
+  render() {
+    return (
+      <div>
+        <div>
+        <Navigation/>
+        <div className="row">
+          <div className="col-md-">
+            <Formulario onAddTodo={this.AddTask}/>
+          </div>
+          <div className="col-md-6">
+          <Tareas/>
+          </div>
+        </div>
+        
+        
+
+
     </div>
-  );
+      </div>
+    )
+  }
 }
 
-export default App;
+
+

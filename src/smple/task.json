@@ -1,0 +1,41 @@
+[
+    {
+        "title": "task1",
+        "responsable": "mauro",
+        "descripcion": "lorem inpsum",
+        "prioridad": "baja"
+        
+
+    },
+
+    {
+        "title": "task2",
+        "responsable": "pipe",
+        "descripcion": "lorem inpsum",
+        "prioridad": "alta"
+
+
+    },
+
+    {
+        "title": "task3",
+        "responsable": "pepe",
+        "descripcion": "lorem inpsum",
+        "prioridad": "media"
+
+
+    },
+
+    {
+        "title": "task3",
+        "responsable": "pepe",
+        "descripcion": "lorem inpsum",
+        "prioridad": "media"
+
+
+    }
+
+
+
+
+]
